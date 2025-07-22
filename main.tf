@@ -18,3 +18,12 @@ provider "azurerm" {
 
  
 }
+
+
+  resource "azurerm_resource_group" "rohini" {
+  name     = "testrg12"
+  location = "West US"
+
+ 
+}
+
