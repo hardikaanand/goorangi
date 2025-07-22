@@ -20,6 +20,7 @@ provider "azurerm" {
 }
 
 
+
   resource "azurerm_resource_group" "rohini" {
   name     = "testrg12"
   location = "West US"
@@ -27,3 +28,15 @@ provider "azurerm" {
  
 }
 
+
+resource "azurerm_storage_account" "testStorageAccount11" {
+  name                     = "teststorageaccount11"
+  resource_group_name      = azurerm_resource_group.testResourceGroup.name
+  location                 = azurerm_resource_group.testResourceGroup.location
+  account_tier             = "Standard"
+  account_replication_type = "LRS"
+
+  tags = {
+    environment = "Test"
+  }
+}
