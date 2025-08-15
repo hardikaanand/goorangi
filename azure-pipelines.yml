@@ -28,4 +28,5 @@ steps:
 - task: TerraformTask@5
   inputs:
     provider: 'azurerm'
-    command: 'validate'
+    command: 'plan'
+    environmentServiceNameAzureRM: 'dhruv'
