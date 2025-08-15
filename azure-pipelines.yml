@@ -13,3 +13,6 @@ steps:
       # Write your PowerShell commands here.
       
       Write-Host "Hello World"
+- task: TerraformInstaller@1
+  inputs:
+    terraformVersion: 'latest'
